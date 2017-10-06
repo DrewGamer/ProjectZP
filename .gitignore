@@ -1,5 +1,7 @@
 # Ignoring file types here
 *.xcf
+*.zip
+*.exe
 
 
 # Ignoring Folders here
