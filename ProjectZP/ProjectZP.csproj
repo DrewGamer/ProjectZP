@@ -79,8 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ClickableTile.cs" />
+    <Compile Include="Assets\Scripts\LaserForceScript.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\TestTargetScript.cs" />
     <Compile Include="Assets\Scripts\TileMap.cs" />
     <Compile Include="Assets\Scripts\TileType.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
