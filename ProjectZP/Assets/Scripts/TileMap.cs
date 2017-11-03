@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class TileMap : MonoBehaviour{
 
-    public GameObject selectedUnit;
-    public float speed;
-    public bool isMoving;
-    private Vector3 targetPos;
-    private Vector3 mousePos;
-    private float distance;
+    public PlayerController selectedUnit;
 
     public TileType[] tileTypes;
 
@@ -62,28 +57,28 @@ public class TileMap : MonoBehaviour{
             }
         }
     }
-
+    
     public void MoveSelectedUnitTo(int x, int y)
     {
-        targetPos = new Vector3(x, y, -1);
+        selectedUnit.targetPos = new Vector3(x, y, -1);
 
-        Debug.Log("hi or whatever");
-        mousePos = Input.mousePosition;
+        selectedUnit.mousePos = Input.mousePosition;
         Vector3 currentPos = Camera.main.WorldToScreenPoint(selectedUnit.transform.position);
 
-        mousePos.x = mousePos.x - currentPos.x;
-        mousePos.y = mousePos.y - currentPos.y;
+        selectedUnit.mousePos.x = selectedUnit.mousePos.x - currentPos.x;
+        selectedUnit.mousePos.y = selectedUnit.mousePos.y - currentPos.y;
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(selectedUnit.mousePos.y, selectedUnit.mousePos.x) * Mathf.Rad2Deg;
 
         selectedUnit.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        distance = Vector3.Distance(selectedUnit.transform.position, targetPos);
-        Debug.Log("Distance" + distance);
+        selectedUnit.distance = Vector3.Distance(selectedUnit.transform.position, selectedUnit.targetPos);
+        Debug.Log("Distance" + selectedUnit.distance);
 
-        isMoving = true;
+        selectedUnit.isMoving = true;
     }
-
+    
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -100,6 +95,6 @@ public class TileMap : MonoBehaviour{
         else
             isMoving = false;
     }
-
+    */
 }
 
