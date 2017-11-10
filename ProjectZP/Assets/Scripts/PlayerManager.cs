@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
 
+    public float speed = 0.0f;
+    bool isMoving = false;
+    public Vector3 target;
+
     public Grid playerGrid;
     public GameObject P1;
     public GameObject P2;
@@ -34,15 +38,29 @@ public class PlayerManager : MonoBehaviour {
             Debug.Log("Up");
             if (P1.transform.position.y < playerGrid.tClamp )
             {
-                P1.transform.position += new Vector3(0, 1, 0);
+                target = P1.transform.position += new Vector3(0, 1, 0);
+                isMoving = true;
+                //P1.transform.position += new Vector3(0, 1, 0);
+                //P1.transform.position = Vector3.MoveTowards(P1.transform.position, P1.transform.position += Vector3.up, 0.5f);
+                //P1.transform.Translate(new Vector3(0,1,0) * Time.deltaTime, Space.Self);
+                if (isMoving)
+                {
+                    P1.transform.position = Vector3.MoveTowards(P1.transform.position, target, 0.1f * Time.deltaTime);
+
+                    if(P1.transform.position == target)
+                    {
+                        isMoving = false;
+                    }
+                }
                 if (playerGrid.tiles[CastX(P1)-1, CastY(P1)-1].isOccupied)
                 {
-                    P1.transform.position += new Vector3(0, -1, 0);
+                    //P1.transform.position += new Vector3(0, -1, 0);
+                    
                 }
                 else
                 {
-                    playerGrid.tiles[CastX(P1)-1, CastY(P1) - 2].isOccupied = false;
-                    playerGrid.tiles[CastX(P1)-1, CastY(P1)-1].isOccupied = true;
+                   // playerGrid.tiles[CastX(P1)-1, CastY(P1) - 2].isOccupied = false;
+                    //playerGrid.tiles[CastX(P1)-1, CastY(P1)-1].isOccupied = true;
                 }
             }
             
