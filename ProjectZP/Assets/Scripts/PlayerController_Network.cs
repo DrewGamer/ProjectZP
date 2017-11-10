@@ -16,19 +16,21 @@ public class PlayerController_Network : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        movementSphere = Instantiate(movementSphere, gameObject.transform);
-
-        if (!isLocalPlayer)
+        if (!isLocalPlayer) {
             movementSphere.GetComponent<Renderer>().enabled = false;
+        }
 	}
 
     void OnMouseUp()
     {
         if (!isLocalPlayer)
             return;
-        Debug.Log("Click");
 
-        MoveSelectedUnitTo();
+        if (WhichTurn.playerturn == 1)
+        {
+            Debug.Log("Click");
+            MoveSelectedUnitTo();
+        }
     }
 
     public void MoveSelectedUnitTo()
@@ -36,23 +38,24 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-        targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        targetPos.z = -1;
-        distance = Vector3.Distance(transform.position, targetPos);
-        movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
-        Debug.Log("Distance" + distance);
+            targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPos.z = -1;
+            distance = Vector3.Distance(transform.position, targetPos);
+            movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
+            Debug.Log("Distance" + distance);
 
-        isMoving = true;
+            isMoving = true;
 
-        mousePos = Input.mousePosition;
-        Vector3 currentPos = Camera.main.WorldToScreenPoint(transform.position);
+            mousePos = Input.mousePosition;
+            Vector3 currentPos = Camera.main.WorldToScreenPoint(transform.position);
 
-        mousePos.x = mousePos.x - currentPos.x;
-        mousePos.y = mousePos.y - currentPos.y;
+            mousePos.x = mousePos.x - currentPos.x;
+            mousePos.y = mousePos.y - currentPos.y;
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
     }
 
     // Update is called once per frame
@@ -61,11 +64,6 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
         
-        if (Input.GetKey("space"))
-        {
-            movementSphere.transform.localScale = new Vector3(moveLimit, moveLimit, 0.1f);
-        }
-
         if (Input.GetKey("escape"))
             Application.Quit();
 
@@ -79,4 +77,27 @@ public class PlayerController_Network : NetworkBehaviour {
         else
             isMoving = false;
     }
+
+
+    void OnGUI()
+    {
+
+        if (GUILayout.Button("Move"))
+        {
+            movementSphere = Instantiate(movementSphere, gameObject.transform);
+            movementSphere.transform.localScale = new Vector3(moveLimit, moveLimit, 0.1f);
+        }
+
+        if (GUILayout.Button("Attack"))
+        {
+
+        }
+
+        if(GUILayout.Button("End Turn"))
+        {
+
+        }
+    }
+
+
 }
