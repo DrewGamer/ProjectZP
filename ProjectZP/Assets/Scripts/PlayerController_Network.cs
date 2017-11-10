@@ -51,8 +51,6 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-
-
         //transforms position of mouse from screen space into world space.
         targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         targetPos.z = -1;
@@ -62,14 +60,7 @@ public class PlayerController_Network : NetworkBehaviour {
         movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
         Debug.Log("Distance" + distance);
 
-            targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPos.z = -1;
-            distance = Vector3.Distance(transform.position, targetPos);
-            movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
-            Debug.Log("Distance" + distance);
-
-
-            isMoving = true;
+        isMoving = true;
 
 
         //mouse position set to current mouse location(in pixel coordinates)
@@ -81,16 +72,9 @@ public class PlayerController_Network : NetworkBehaviour {
         mousePos.x = mousePos.x - currentPos.x;
         mousePos.y = mousePos.y - currentPos.y;
 
-
-
-
         //changes direction ship is facing on click
-
-             isMoving = true;
-
-             float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
     }
 
