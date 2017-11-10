@@ -174,8 +174,13 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.19970529, y: -0.37604252, z: 0.2778152, w: 0.8611205}
   m_LocalPosition: {x: 7.85, y: 5.34, z: -8.56}
+=======
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+>>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 =======
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
@@ -200,7 +205,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 33.565002, y: -40.096, z: 23.201}
+=======
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+>>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 =======
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 >>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
@@ -430,6 +439,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &379935718
 Prefab:
   m_ObjectHideFlags: 0
@@ -561,6 +571,8 @@ Prefab:
 >>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 =======
 >>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
+=======
+>>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 --- !u!1 &828294548
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +659,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: -7.285}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -15}
+>>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 =======
   m_LocalPosition: {x: 0, y: 0, z: -15}
 >>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b

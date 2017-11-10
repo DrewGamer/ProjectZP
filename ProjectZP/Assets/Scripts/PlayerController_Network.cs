@@ -22,27 +22,14 @@ public class PlayerController_Network : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         //Makes movement sphere
         movementSphere = Instantiate(movementSphere, gameObject.transform);
 
         //Cannot see other ships movement range
-        if (!isLocalPlayer)
-=======
         if (!isLocalPlayer) {
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
-        if (!isLocalPlayer) {
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
-        if (!isLocalPlayer) {
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
-        if (!isLocalPlayer) {
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
+
+
             movementSphere.GetComponent<Renderer>().enabled = false;
         }
 	}
@@ -64,10 +51,8 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
         //transforms position of mouse from screen space into world space.
         targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         targetPos.z = -1;
@@ -76,34 +61,17 @@ public class PlayerController_Network : NetworkBehaviour {
         //changes size of movements sphere based on distance traveled
         movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
         Debug.Log("Distance" + distance);
-=======
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
+
             targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPos.z = -1;
             distance = Vector3.Distance(transform.position, targetPos);
             movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
             Debug.Log("Distance" + distance);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
             isMoving = true;
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
 
-            isMoving = true;
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 
-            mousePos = Input.mousePosition;
-            Vector3 currentPos = Camera.main.WorldToScreenPoint(transform.position);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         //mouse position set to current mouse location(in pixel coordinates)
         mousePos = Input.mousePosition;
         //current position of gameobject
@@ -112,59 +80,18 @@ public class PlayerController_Network : NetworkBehaviour {
         //used for calculating angle of ship
         mousePos.x = mousePos.x - currentPos.x;
         mousePos.y = mousePos.y - currentPos.y;
-=======
-            mousePos.x = mousePos.x - currentPos.x;
-            mousePos.y = mousePos.y - currentPos.y;
 
-            float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-<<<<<<< HEAD
+
         //changes direction ship is facing on click
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
 
-            isMoving = true;
+             isMoving = true;
 
-            mousePos = Input.mousePosition;
-            Vector3 currentPos = Camera.main.WorldToScreenPoint(transform.position);
+             float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 
-            mousePos.x = mousePos.x - currentPos.x;
-            mousePos.y = mousePos.y - currentPos.y;
+             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-            float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
-
-            isMoving = true;
-
-            mousePos = Input.mousePosition;
-            Vector3 currentPos = Camera.main.WorldToScreenPoint(transform.position);
-
-            mousePos.x = mousePos.x - currentPos.x;
-            mousePos.y = mousePos.y - currentPos.y;
-
-            float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
-            mousePos.x = mousePos.x - currentPos.x;
-            mousePos.y = mousePos.y - currentPos.y;
-
-            float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
     }
 
     // Update is called once per frame
@@ -173,27 +100,17 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+        /*
         //resets movements sphere
         if (Input.GetKey("space"))
         {
             movementSphere.transform.localScale = new Vector3(moveLimit, moveLimit, 0.1f);
         }
         //quits application
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
+
         if (Input.GetKey("escape"))
             Application.Quit();
-
+        */
         //movement of ship
         if (isMoving && distance > 0.01)
         {
@@ -244,58 +161,6 @@ public class PlayerController_Network : NetworkBehaviour {
     }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-    void OnGUI()
-    {
-
-        if (GUILayout.Button("Move"))
-        {
-            movementSphere = Instantiate(movementSphere, gameObject.transform);
-            movementSphere.transform.localScale = new Vector3(moveLimit, moveLimit, 0.1f);
-        }
-
-        if (GUILayout.Button("Attack"))
-        {
-
-        }
-
-        if(GUILayout.Button("End Turn"))
-        {
-
-        }
-    }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
-    void OnGUI()
-    {
-
-        if (GUILayout.Button("Move"))
-        {
-            movementSphere = Instantiate(movementSphere, gameObject.transform);
-            movementSphere.transform.localScale = new Vector3(moveLimit, moveLimit, 0.1f);
-        }
-
-        if (GUILayout.Button("Attack"))
-        {
-
-        }
-
-        if(GUILayout.Button("End Turn"))
-        {
-
-        }
-    }
-
-
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
-=======
->>>>>>> 221e4c0493f4ca6083e69305f39e3635ad2caa4b
 }
