@@ -16,9 +16,10 @@ public class LaserForceScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (lifeTime > 30)
+        if (lifeTime > 120)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else lifeTime++;
 

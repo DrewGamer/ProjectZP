@@ -35,3 +35,13 @@ sysinfo.txt
 *.unitypackage
 
 **/Ruegamer/
+*.meta
+*.meta
+*.meta
+*.meta
+*.meta
+ProjectZP/Assets/Objects/PlayerManager.prefab.meta
+*.prefab
+*.ide
+ProjectZP/Assets/Scenes/TestScene.unity
+ProjectZP/Assets/Scripts/PlayerManager.cs
