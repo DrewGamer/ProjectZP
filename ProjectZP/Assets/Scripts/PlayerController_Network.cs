@@ -11,17 +11,18 @@ public class PlayerController_Network : NetworkBehaviour {
 
     public GameObject movementSphere;
 
-    private bool isMoving;
-    private float distance;
-    private Vector3 targetPos;
-    private Vector3 mousePos;
-    private Vector3 direction;
+    public bool isMoving;
+    public float distance;
+    public Vector3 targetPos;
+    public Vector3 mousePos;
+    public Vector3 direction;
 
-
-
+    public bool isMyTurn;
 
 	// Use this for initialization
 	void Start () {
+
+        isMyTurn = false;
 
         //Makes movement sphere
         movementSphere = Instantiate(movementSphere, gameObject.transform);
@@ -95,6 +96,8 @@ public class PlayerController_Network : NetworkBehaviour {
         if (Input.GetKey("escape"))
             Application.Quit();
         */
+
+
         //movement of ship
         if (isMoving && distance > 0.01)
         {
