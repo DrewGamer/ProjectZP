@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1930957494657550, guid: 55555ba235f214249ad4495d4acfb92d, type: 2}
-  energyWave: {fileID: 1759203003161978, guid: 80ce5c8279273c14d9f4e574ebe7e1ac, type: 2}
+  energyWave: {fileID: 1759203003161978, guid: 688e3056b1198964582fa359ce1a68e6, type: 2}
   eWave: 0
   speed: 3
   moveLimit: 10
@@ -437,6 +437,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   mousePos: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
+  isMyTurn: 0
 --- !u!114 &114410420017466752
 MonoBehaviour:
   m_ObjectHideFlags: 1

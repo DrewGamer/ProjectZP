@@ -51,13 +51,8 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-<<<<<<< HEAD
-
 
         //transforms position of mouse on mouseUp from screen space into world space.
-=======
-        //transforms position of mouse from screen space into world space.
->>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
         targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         targetPos.z = -1;
         //distance set to distance between ShipController and Mouse location on mouse up
@@ -65,12 +60,9 @@ public class PlayerController_Network : NetworkBehaviour {
         //changes size of movements sphere based on distance traveled
         movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
         Debug.Log("Distance" + distance);
-<<<<<<< HEAD
-            isMoving = true;    
-=======
 
-        isMoving = true;
->>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
+            isMoving = true;    
+
 
 
         //mouse position set to current mouse location(in pixel coordinates)
@@ -83,17 +75,13 @@ public class PlayerController_Network : NetworkBehaviour {
         mousePos.y = mousePos.y - currentPos.y;
 
         //changes direction ship is facing on click
-<<<<<<< HEAD
 
              isMoving = true;
 
              float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
          
              transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle-90));
-=======
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
->>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
+
 
     }
 
@@ -113,13 +101,8 @@ public class PlayerController_Network : NetworkBehaviour {
 
         if (Input.GetKey("escape"))
             Application.Quit();
-<<<<<<< HEAD
-        
-=======
-        */
 
 
->>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
         //movement of ship
         if (isMoving && distance > 0.01)
         {
