@@ -1,11 +1,17 @@
 fileFormatVersion: 2
 guid: 5f2b0af234d12174e948db4d3e1a5148
-timeCreated: 1510080713
+timeCreated: 1510319140
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - projectile: {fileID: 1930957494657550, guid: 55555ba235f214249ad4495d4acfb92d,
+      type: 2}
+  - energyWave: {fileID: 1759203003161978, guid: 80ce5c8279273c14d9f4e574ebe7e1ac,
+      type: 2}
+  - movementSphere: {fileID: 1780497079126684, guid: 360f5be2349f6f54b9c3ea782225de9a,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -24,9 +24,8 @@ public class EnergyWave : MonoBehaviour {
         if (lifeTime > 40)
         {
             //Destroy(gameObject);
-            
-            
             gameObject.SetActive(false);
+            //color transition
             color.a = 1.0f;
             gameObject.GetComponent<Renderer>().material.color = color;
             gameObject.transform.localScale = new Vector3(1, 1, 0.5f);

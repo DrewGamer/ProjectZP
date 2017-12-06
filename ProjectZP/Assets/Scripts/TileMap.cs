@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class TileMap : MonoBehaviour{
+public class TileMap : NetworkBehaviour{
 
-    public PlayerController selectedUnit;
+    public PlayerController_Network selectedUnit;
 
     public TileType[] tileTypes;
 

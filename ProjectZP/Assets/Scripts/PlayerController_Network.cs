@@ -11,24 +11,24 @@ public class PlayerController_Network : NetworkBehaviour {
 
     public GameObject movementSphere;
 
-    private bool isMoving;
-    private float distance;
-    private Vector3 targetPos;
-    private Vector3 mousePos;
-    private Vector3 direction;
+    public bool isMoving;
+    public float distance;
+    public Vector3 targetPos;
+    public Vector3 mousePos;
+    public Vector3 direction;
 
-
-
+    public bool isMyTurn;
 
 	// Use this for initialization
 	void Start () {
+
+        isMyTurn = false;
 
         //Makes movement sphere
         movementSphere = Instantiate(movementSphere, gameObject.transform);
 
         //Cannot see other ships movement range
         if (!isLocalPlayer) {
-
 
             movementSphere.GetComponent<Renderer>().enabled = false;
         }
@@ -51,25 +51,26 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
+<<<<<<< HEAD
 
 
+        //transforms position of mouse on mouseUp from screen space into world space.
+=======
         //transforms position of mouse from screen space into world space.
+>>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
         targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         targetPos.z = -1;
-        //distance set to distance of this object to distance of target position
+        //distance set to distance between ShipController and Mouse location on mouse up
         distance = Vector3.Distance(transform.position, targetPos);
         //changes size of movements sphere based on distance traveled
         movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
         Debug.Log("Distance" + distance);
+<<<<<<< HEAD
+            isMoving = true;    
+=======
 
-            targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPos.z = -1;
-            distance = Vector3.Distance(transform.position, targetPos);
-            movementSphere.transform.localScale -= new Vector3(distance * 2, distance * 2, 0);
-            Debug.Log("Distance" + distance);
-
-
-            isMoving = true;
+        isMoving = true;
+>>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
 
 
         //mouse position set to current mouse location(in pixel coordinates)
@@ -81,16 +82,18 @@ public class PlayerController_Network : NetworkBehaviour {
         mousePos.x = mousePos.x - currentPos.x;
         mousePos.y = mousePos.y - currentPos.y;
 
-
-
-
         //changes direction ship is facing on click
+<<<<<<< HEAD
 
              isMoving = true;
 
              float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+         
+             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle-90));
+=======
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+>>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
 
     }
 
@@ -100,7 +103,7 @@ public class PlayerController_Network : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
         
-        /*
+        
         //resets movements sphere
         if (Input.GetKey("space"))
         {
@@ -110,7 +113,13 @@ public class PlayerController_Network : NetworkBehaviour {
 
         if (Input.GetKey("escape"))
             Application.Quit();
+<<<<<<< HEAD
+        
+=======
         */
+
+
+>>>>>>> cc3346357929042963521ff8f9d3afc81f7deb0a
         //movement of ship
         if (isMoving && distance > 0.01)
         {
@@ -122,9 +131,10 @@ public class PlayerController_Network : NetworkBehaviour {
         else
             isMoving = false;
 
+        //laser
         if (Input.GetKeyDown("b"))
         {
-            projectile = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation );
+            projectile = Instantiate(projectile, gameObject.transform.position, gameObject.transform.Find("WIPship").rotation );
             projectile.gameObject.SetActive(true);
         }
         if (Input.GetKeyDown("n"))
@@ -134,6 +144,7 @@ public class PlayerController_Network : NetworkBehaviour {
                 energyWave = Instantiate(energyWave, gameObject.transform.position, gameObject.transform.rotation);
                 eWave = true;
             }
+            energyWave.transform.position = gameObject.transform.position;
             energyWave.gameObject.SetActive(true);
         }
 
