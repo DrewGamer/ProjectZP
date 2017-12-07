@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 114378907975663508}
   - component: {fileID: 122909621281466538}
   - component: {fileID: 136052289483767174}
-  - component: {fileID: 114832456599218168}
+  - component: {fileID: 114131465218154908}
   m_Layer: 0
   m_Name: Bullet-Copper
   m_TagString: Untagged
@@ -265,6 +265,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &114131465218154908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefb21da72cd1114fa20033940f0bc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
 --- !u!114 &114170671678007094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,21 +292,21 @@ MonoBehaviour:
     m_Value: 0
   m_AssetId:
     i0: 164
-    i1: 25
-    i2: 43
-    i3: 188
-    i4: 36
-    i5: 27
-    i6: 7
-    i7: 228
-    i8: 88
-    i9: 18
-    i10: 174
-    i11: 68
-    i12: 35
-    i13: 124
-    i14: 8
-    i15: 42
+    i1: 87
+    i2: 31
+    i3: 16
+    i4: 103
+    i5: 61
+    i6: 103
+    i7: 52
+    i8: 73
+    i9: 75
+    i10: 162
+    i11: 95
+    i12: 1
+    i13: 183
+    i14: 7
+    i15: 146
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &114378907975663508
@@ -318,18 +330,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114832456599218168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6407b529ae03c243afb2f1445b1395e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 0}
 --- !u!122 &122909621281466538
 Halo:
   m_ObjectHideFlags: 1
