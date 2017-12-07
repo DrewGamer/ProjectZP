@@ -119,8 +119,20 @@ public class PlayerController_Network : NetworkBehaviour {
     }
     */
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("j"))
+            firingGun = true;
+        if (Input.GetKeyDown("l"))
+            firingLaser = true;
+        if (Input.GetKeyUp("j"))
+            firingGun = false;
+        if (Input.GetKeyUp("l"))
+            firingLaser = false;
+    }
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         /*
         if (networkController.GetComponent<GameController>().currentPlayerTurn == turnNumber)
@@ -156,14 +168,6 @@ public class PlayerController_Network : NetworkBehaviour {
             isMoving = false;
             */
 
-        if (Input.GetKeyDown("j"))
-            firingGun = true;
-        if (Input.GetKeyDown("l"))
-            firingLaser = true;
-        if (Input.GetKeyUp("j"))
-            firingGun = false;
-        if (Input.GetKeyUp("l"))
-            firingLaser = false;
         //gun
         if (Input.GetKey("j") && timerBullet > fireRateBullet && !firingLaser && GetComponent<GunAmmo>().currentAmmo >= 1)
         {

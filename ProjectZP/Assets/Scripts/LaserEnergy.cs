@@ -26,7 +26,7 @@ public class LaserEnergy : NetworkBehaviour
     [Command]
     public void CmdRegenEnergy()
     {
-        currentEnergy += 0.1f;
+        currentEnergy += 0.2f;
         if (currentEnergy >= maxEnergy)
             currentEnergy = maxEnergy;
     }

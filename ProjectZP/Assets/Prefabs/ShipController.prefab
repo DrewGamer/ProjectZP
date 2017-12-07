@@ -139,10 +139,10 @@ GameObject:
   - component: {fileID: 114679410922513000}
   - component: {fileID: 114410420017466752}
   - component: {fileID: 114127467745845828}
-  - component: {fileID: 114419334384151298}
   - component: {fileID: 136858399722834890}
-  - component: {fileID: 114472765511067408}
-  - component: {fileID: 114601333337651222}
+  - component: {fileID: 114618631435263772}
+  - component: {fileID: 114625050914125768}
+  - component: {fileID: 114743707461208636}
   m_Layer: 0
   m_Name: ShipController
   m_TagString: Untagged
@@ -591,28 +591,28 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1853146694934096}
-  m_Mesh: {fileID: 4300000, guid: aba7ebe3a3c70534e8c125a392aab5ac, type: 3}
+  m_Mesh: {fileID: 4300000, guid: adacbf64bbf5cbd489eef8db6bc269ce, type: 3}
 --- !u!33 &33453465754233844
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028435901370732}
-  m_Mesh: {fileID: 4300004, guid: aba7ebe3a3c70534e8c125a392aab5ac, type: 3}
+  m_Mesh: {fileID: 4300004, guid: adacbf64bbf5cbd489eef8db6bc269ce, type: 3}
 --- !u!33 &33483885004167864
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096252190885314}
-  m_Mesh: {fileID: 4300006, guid: aba7ebe3a3c70534e8c125a392aab5ac, type: 3}
+  m_Mesh: {fileID: 4300006, guid: adacbf64bbf5cbd489eef8db6bc269ce, type: 3}
 --- !u!33 &33530377408668896
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1651696328152940}
-  m_Mesh: {fileID: 4300002, guid: aba7ebe3a3c70534e8c125a392aab5ac, type: 3}
+  m_Mesh: {fileID: 4300002, guid: adacbf64bbf5cbd489eef8db6bc269ce, type: 3}
 --- !u!54 &54873218077391216
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -620,7 +620,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496740780343236}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 25
   m_Drag: 0
   m_AngularDrag: 2
   m_UseGravity: 0
@@ -637,7 +637,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4bfee62ae8266f34db8436955daadfea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: de92b66942d227743a29a759fd8a4acd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -695,7 +695,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -717,7 +717,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 30114844b380b88418785402b1e582c0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 77ddeb9217ae9014c860886513130c2c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -775,7 +775,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -843,9 +843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2b0af234d12174e948db4d3e1a5148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkController: {fileID: 1923392290069122, guid: 1b78f12e86a71b846a32a4d42a4e14a1,
+  networkController: {fileID: 1923392290069122, guid: 07905c381207a094db73b8c17b27d2de,
     type: 2}
-  energyWave: {fileID: 1759203003161978, guid: 80ce5c8279273c14d9f4e574ebe7e1ac, type: 2}
+  energyWave: {fileID: 1759203003161978, guid: 05584dab636556c4eb9b0fb0ddf4df48, type: 2}
   eWave: 0
   speed: 3
   turnNumber: 0
@@ -853,13 +853,13 @@ MonoBehaviour:
   topSpeed: 5
   turnSpeed: 30
   gunFireLocation: {fileID: 1650986786749112}
-  projectileBullet: {fileID: 178192, guid: a4571f10673d6734494ba25f01b70792, type: 2}
-  fireRateBullet: 10
+  projectileBullet: {fileID: 178192, guid: a4192bbc241b07e45812ae44237c082a, type: 2}
+  fireRateBullet: 3
   spreadBullet: 3
   laserFireLocation: {fileID: 1290523812005310}
-  projectileLaser: {fileID: 1930957494657550, guid: 55555ba235f214249ad4495d4acfb92d,
+  projectileLaser: {fileID: 1930957494657550, guid: b86adc6317aac504589897b522ce3972,
     type: 2}
-  fireRateLaser: 20
+  fireRateLaser: 8
   spreadLaser: 1
   gunUI: {fileID: 223676459986646480}
   laserUI: {fileID: 223417835409891026}
@@ -1002,33 +1002,6 @@ MonoBehaviour:
   m_SnapThreshold: 1
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114419334384151298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496740780343236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ded85dae5547cf042b3ad7c6bb1d9b36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 100
-  healthBar: {fileID: 224625447761166354}
-  deathExplosion: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 2}
---- !u!114 &114472765511067408
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496740780343236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cc8a2d7d9a0eed439e4aa313955a876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentEnergy: 100
-  energyBar: {fileID: 224428879898167670}
 --- !u!114 &114570362664319728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1045,7 +1018,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114601333337651222
+--- !u!114 &114618631435263772
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1053,11 +1026,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1496740780343236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a949f8fe9bf106647802e0c452fe913e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1acbe834a3af3db47b9a59098c757803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAmmo: 200
-  ammoBar: {fileID: 224827957872349992}
+  currentEnergy: 0
+  energyBar: {fileID: 224428879898167670}
 --- !u!114 &114619706168941708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1085,6 +1058,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114625050914125768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1496740780343236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b22263682a66b4db5a14f3bf7c0add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAmmo: 0
+  ammoBar: {fileID: 224827957872349992}
 --- !u!114 &114679410922513000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1099,24 +1085,38 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 69
-    i1: 13
-    i2: 70
-    i3: 44
-    i4: 81
-    i5: 24
-    i6: 71
-    i7: 52
-    i8: 123
-    i9: 32
-    i10: 233
-    i11: 204
-    i12: 12
-    i13: 75
-    i14: 186
-    i15: 110
+    i0: 162
+    i1: 162
+    i2: 253
+    i3: 85
+    i4: 201
+    i5: 224
+    i6: 122
+    i7: 116
+    i8: 171
+    i9: 119
+    i10: 54
+    i11: 67
+    i12: 234
+    i13: 18
+    i14: 247
+    i15: 248
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114743707461208636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1496740780343236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a39171a9b90dd940ac52ed1ac2b733c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
+  healthBar: {fileID: 224625447761166354}
+  deathExplosion: {fileID: 100008, guid: d50b0b9f40842544ab2ca3e0c3658511, type: 2}
 --- !u!114 &114751328492929290
 MonoBehaviour:
   m_ObjectHideFlags: 1
