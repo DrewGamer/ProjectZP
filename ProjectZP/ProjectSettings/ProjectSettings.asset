@@ -599,12 +599,13 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: d856a9ac-bf4a-4dee-b5f9-7d0a0c6eadd9
-  projectName: New Unity Project
-  organizationId: brooksat
+  cloudProjectId: 53499bb1-3df5-4259-8aca-0f12fd890777
+  projectName: ProjectZP
+  organizationId: drewgamer-45f05d78-fad0-49c2-a576-a974e78eac9b
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

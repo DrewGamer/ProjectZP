@@ -12,7 +12,7 @@ public class ClickableTile : MonoBehaviour {
     {
         Debug.Log("Click");
 
-        map.MoveSelectedUnitTo(tileX, tileY);
+        //map.MoveSelectedUnitTo(tileX, tileY);
     }
 
 }

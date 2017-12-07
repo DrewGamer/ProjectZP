@@ -58,7 +58,8 @@ public class TileMap : NetworkBehaviour{
             }
         }
     }
-    
+
+    /*
     public void MoveSelectedUnitTo(int x, int y)
     {
         selectedUnit.targetPos = new Vector3(x, y, -1);
@@ -79,7 +80,7 @@ public class TileMap : NetworkBehaviour{
         selectedUnit.isMoving = true;
     }
     
-    /*
+    
     // Update is called once per frame
     void Update()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class LaserForceScript : NetworkBehaviour
+public class GunForceScript : NetworkBehaviour
 {
     public GameObject parent;
 
@@ -20,5 +20,4 @@ public class LaserForceScript : NetworkBehaviour
 
         Destroy(gameObject);
     }
-
 }
